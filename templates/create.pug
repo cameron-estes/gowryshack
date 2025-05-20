@@ -1,0 +1,32 @@
+extends template
+
+block head
+  script(src="/js/new_listing.js")
+
+block content
+  .new_listing
+    h1 Create Auction Listing
+    form(action='/create' method='POST')
+
+      label(for='title') Title:
+      input#title(type='text' name='title')
+
+      label(for='img_url') Image URL:
+      input#img_url(type='url' name='img_url')
+
+      label(for='description') Description:
+      textarea#description(name='description')
+
+      label(for='category') Category:
+      select#category(name='category')
+        option(value='Talisman') Talisman
+        option(value='Incantation') Incantation
+        option(value='Crafting Material') Crafting Material
+        option(value='Other') Other
+      #other-category-div(style='display:none;')
+        label(for='other-category') Other Category:
+        input#other_category(type='text' name='other_category')
+      label(for='end-date') Sale End Date:
+      input#end_date(type='date' name='end_date' required='')
+
+      button(type='submit') Create Listing

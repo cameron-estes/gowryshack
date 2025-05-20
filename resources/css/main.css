@@ -1,0 +1,336 @@
+/* Did some searching online for good fonts and colors to use for text so I could create a visually pleasing webpage */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f4e2d8;
+    font-family: 'Cormorant Garamond', serif;
+    color: #3b3a30;
+}
+
+nav {
+    background-image: url(https://img.freepik.com/premium-photo/surface-texture-old-wood-is-dark-brown-natural-grunge-style-ai-generated-header-banner-mockup_868611-4561.jpg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+footer {
+    background-image: url(https://img.freepik.com/premium-photo/surface-texture-old-wood-is-dark-brown-natural-grunge-style-ai-generated-header-banner-mockup_868611-4561.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    color: white;
+    text-align: center;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+.image-alter {
+    width: 650px;
+    height: auto;
+    border: 2px solid #3b3a30;
+    border-radius: 50px;
+}
+
+.image-alter-listing {
+    width: 500px;
+    height: auto;
+    border: 2px solid #3b3a30;
+    border-radius: 50px;
+}
+ .image-alter-preview {
+    width: 300px;
+    height: auto;
+    border: 2px solid #3b3a30;
+    border-radius: 50px;
+}
+
+
+.footer-items {
+    color: #ffffff;
+    margin-right: 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar a {
+    color: #ffffff;
+    margin-right: 2rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: #ffba08;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-form input[type="text"] {
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    width: 350px;
+}
+
+.search-form select {
+    padding: 1rem 1rem;
+    border-radius: 8px;
+    border: none;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    width: 220px;
+}
+
+.search-form input[type="submit"] {
+    padding: 1rem 2.5rem;
+    background-color: #f4e2d8;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #1a1a2e;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.search-form input[type="submit"]:hover {
+    background-color: #e09e05;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100%;
+    padding: 20px;
+}
+
+.left-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4e2d8;
+}
+
+.right-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4e2d8;
+}
+
+.mainpage {
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100vh;
+    padding: 20px;
+}
+
+/*
+.right-content div {
+    word-wrap: break-word;
+} */
+
+.description {
+    background-color: #fff;
+    border: 1px solid #888;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 10px;
+    color: #333;
+    max-width: 300px;
+    overflow-wrap: break-word
+}
+
+.explanation {
+    width: 600px;
+    background-color: #fff;
+    padding: 10px;
+    border: 2px solid #555;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    float: right;
+}
+
+.item-list {
+    width: max-content;
+    background-color: #fff;
+    padding: 10px;
+    border: 2px solid #555;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    float: right;
+}
+
+.changestyle {
+    list-style-position: inside;
+}
+
+.bidder {
+    width: 350px;
+    background-color: #fff;
+    padding: 10px;
+    border: 2px solid #555;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    float: right;
+}
+
+.bidbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+.biddername {
+    font-weight: bold;
+}
+
+.biddermsg {
+    font-style: italic;
+}
+
+.topp {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.bidder p {
+    margin: 5px 0;
+    color: #333;
+}
+
+.right-content h3 {
+    margin-bottom: 10px;
+}
+
+.gallery-and-preview-container {
+    display: flex;
+    flex-direction: row;
+}
+/*
+.previewdiv {
+  display: flex;
+  flex-direction: column; */
+/* } */
+
+.gallery {
+    width: 100%;
+    margin: 20px 0;
+    font-family: 'Cormorant Garamond', serif;
+    background-color: #f9f1e7;
+}
+
+.gallery th, .gallery td {
+    padding: 15px;
+    border: 1px solid #888;
+    text-align: left;
+}
+
+.gallery th {
+    background-color: #b08968;
+    color: #fff;
+    font-weight: bold;
+}
+
+.gallery tr:hover {
+    background-color: #d8c4b2;
+}
+
+.invis {
+    display:none;
+}
+
+.visible {
+    display:block;
+}
+
+.bid_form {
+    display: block;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+.bid_form input {
+    width: 100%;
+}
+
+.succ_fail_page {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    padding: 15px;
+    border: 1px solid #888;
+}
+
+.succ_fail_page a {
+    color: #ffffff;
+    margin-right: 2rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.succ_fail_page a:hover {
+    color: #ffba08;
+}
+
+.new_listing {
+    width: 750px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 10px;
+    padding: 15px;
+    border: 1px solid #888;
+  }
+
+.new_listing input, textarea, label, select {
+    width: 100%;
+}
+
+/*
+.place-bid-container {
+    display:flex;
+    flex-direction:row;
+}
+
+.bids-bar {
+    flex-direction: column;
+} */

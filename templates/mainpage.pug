@@ -1,0 +1,30 @@
+extends template
+
+block content
+  .container
+    .left-content
+      h1 Gowry's Mystical and Magical Items
+      h2 The Finest Talismans in the Lands Between
+      img.image-alter(src='http://localhost:4131/images/goodest_boy.png' alt='Good Boy')
+      em
+      | See goodest boy himself, perched to protect Gowry and his shack...
+    .right-content
+      p.explanation
+        | The lands between is a forsaken and dangerous place.  Twisted and nefarious creatures alike roam and pillage. Though, despite this,
+        | there is one sactuary.  Gowry's Shack.  Protectivce charms, powerful talismans, and protective equipment alike can be acquired in
+        | this bastion of humankind.  Come to Gowry's Shack to escape to the rotting and desolate ruins of Caelid.
+      p.explanation
+        | Gowry's Shack features a variety of mystical and magical items to help stave off the threatening forces of the rotten Caelid Ruins. Weapons, Summons, and Talismans alike
+        | may be purchases only in exchange for the finest of runes.  Gowry needs to eat too!
+      .item-list
+        h2 Previously Sold Merchandise:
+        ul
+          li(style='list-style-type: none;')
+            ul.changestyle
+              li Meteor Staff
+              li Rotten Winged Sword Insignia
+              li Pest Threads Incantation
+      p.explanation
+        | If any of our recently sold stock catches your fancy, wise Gowry recommends checking out the current stock of items to be sold in his
+        a(href='/gallery')
+          u Gallery

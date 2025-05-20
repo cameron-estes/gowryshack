@@ -1,0 +1,29 @@
+doctype html
+html(lang="en")
+  head
+    title #{title}
+    meta(chartset="UTF-8")
+    link(rel="stylesheet", href="/css/main.css")
+    block head
+  body
+    nav
+      .navbar
+        a(href='http://localhost:4131/main') About Gowry's Shack!
+        a(href='http://localhost:4131/gallery') Gallery
+        a(href='http://localhost:4131/create') Add Listing
+      form.search-form(action='/gallery' method='GET')
+        input(type='text' name='query' placeholder='Search listings')
+        select(name='category')
+          option(value='all') All Listings
+          option(value='Talisman') Talismans
+          option(value='Incantation') Incantations
+          option(value='Crafting Material') Crafting Materials
+        input(type='submit' value='Search')
+
+    block content
+
+    footer.footer-items
+      p
+        | Gowry Appreciates the Continued Support and is helpful to serve!
+      p
+        | Gowry's Shack

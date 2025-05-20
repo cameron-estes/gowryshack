@@ -1,0 +1,54 @@
+extends template
+
+block head
+  script(src="/js/table.js")
+  script(src="/js/preview.js")
+
+block content
+  h1 Gowry's Exclusive Listings
+  .gallery-and-preview-container
+    table.gallery(border='1')#gallery
+      thead
+        tr
+          th Listing
+          th Number of Bids
+          th Category
+          th Top Bidder
+          th Runes
+          th Auction Ends
+          th Time Left
+          th
+      tbody
+        each listing in listings
+          //- here I am adding new functionality to the gallery.pug
+          //- compared to my old gallery.html to account for the preview functionality
+          //- I need to store data about each listing in each tr() element so that I can extract
+          //- it within the preview funciton I will write
+          tr(
+              data-listing-id = listing.id
+              prev-desc = listing.description
+              prev-imgurl = listing.img_url
+              prev-endtime=listing.end_date
+          )
+            td
+              a(href=`/listing/${listing.id}`) #{listing.title}
+            td
+              | #{listing.bids.length}
+            td
+              | #{listing.category}
+            td
+              if listing.bids.length != []
+                | #{listing.bids[0].name}
+              else
+                | N/A
+            td
+              if listing.bids.length != []
+                | #{listing.bids[0].amount}
+              else
+                | N/A
+            td
+              | #{listing.end_date}
+            td.ending-counter
+            td
+              button.delete-listing-button Delete
+    #previewdiv.previewdiv

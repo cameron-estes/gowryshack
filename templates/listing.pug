@@ -1,0 +1,70 @@
+extends template
+
+block head
+  script(src="/js/bid.js")
+
+block content
+  .container
+    .left-content
+      h1 #{listing_to_render.title}
+      div
+        img.image-alter-listing(src=listing_to_render.img_url ,='' alt=listing_to_render.title)
+      div
+        p.description
+          | #{listing_to_render.description}
+    .right-content
+      h3 Current Bidders:
+      button#bid_button Place New Bid
+      .bidder
+        #bid_form.invis
+          input#name(type='text' placeholder='Name')
+          input#amount(type='number' placeholder='Amount')
+          textarea#comment(placeholder='Comment')
+          input#id(type='hidden' value=listing_to_render.id)
+          button#submit_button(type='submit') Submit:
+      #bidlist-container.bidbox
+        each bidder in bids
+          .bidder
+            .topp
+              p.biddername
+                | #{bidder.name}
+              p
+                | #{bidder.amount}
+            p.biddermsg #{bidder.comment}
+
+    //-   .bidder
+    //-     .topp
+    //-       p.biddername Slave Knight Gael
+    //-       p 50000
+    //-     p.biddermsg I can escape the painted world with this... I&apos;m using everything I have!!!
+    //-   .bidder
+    //-     .topp
+    //-       p.biddername Abyss Walker Artorias
+    //-       p 45000
+    //-     p.biddermsg This shall be a fine gift for my sweet puppy friend
+    //-   .bidder
+    //-     .topp
+    //-       p.biddername Bayle the Dread
+    //-       p 40000
+    //-     p.biddermsg HAHAHAHA I stole Placidusax&apos;s scale get rektttt!
+    //-   .bidder
+    //-     .topp
+    //-       p.biddername One Random Belfry Gargoyle
+    //-       p 20000
+    //-     p.biddermsg RRAHAHHAHRHAHHRHHEEEEREHHHHH
+    //-   .bidder
+    //-     .topp
+    //-       p.biddername Messmer the Impaler
+    //-       p 15000
+    //-     p.biddermsg Mother, may thine self covet such an item?
+    //-   .bidder
+    //-     .topp
+    //-       p.biddername Witless Tarnished
+    //-       p 1000
+    //-     p.biddermsg Wow I&apos;m a witless tarnished what is this item?
+    //-   .bidder
+    //-     .topp
+    //-       p.biddername Diseased Hound
+    //-       p 50
+    //-     p.biddermsg
+    //-       | What an exquisit item mine goodness!! Too bad I&apos;m a diseased hound with no runes other than this 50 I have...
